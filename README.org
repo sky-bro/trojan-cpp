@@ -1,0 +1,37 @@
+#+TITLE: trojan
+
+* Introduction
+
+This is a fork of [[https://github.com/trojan-gfw/trojan][trojan]], written in C++, I use this to learn and experiment features that I'm interested in, like:
+- [X] websocket support
+- [X] socks proxy
+- [ ] http proxy
+- [ ] [[https://github.com/st31ny/smux][smux]] support
+
+* build
+
+#+begin_src shell
+  mkdir build
+  cd build
+  cmake -DCMAKE_BUILD_TYPE=Debug -DBoost_USE_STATIC_LIBS=ON ..
+  make
+#+end_src
+
+* Run
+
+I'll write a detailed blog on setting up trojan.
+
+* GUI
+
+I plan to build a simple qt app later (busy at the moment) with more features like:
+- PAC support
+- system proxy
+- import/export configuration
+
+* Development
+
+** Code Style
+
+#+begin_src shell
+  find . -regex '.*\.\(cpp\|hpp\|cc\|cxx\)' -exec clang-format -style=file -i {} \;
+#+end_src
